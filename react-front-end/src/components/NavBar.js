@@ -11,7 +11,7 @@ function NavBar() {
   const closeMobileMenu = () => setClick(false);
 
   const showButton = () => {
-    if (window.innerWith <= 960) {
+    if (window.innerWidth <= 960) {
       setButton(false);
     } else {
       setButton(true);
@@ -68,7 +68,11 @@ function NavBar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn-outline">SIGN UP</Button>}
+          {button && (
+            <Button to="/sign-up" buttonStyle="btn-outline">
+              SIGN UP
+            </Button>
+          )}
         </div>
       </nav>
     </>
